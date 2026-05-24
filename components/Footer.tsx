@@ -23,10 +23,10 @@ const FOOTER_COLS = [
   {
     heading: "Contact",
     links: [
-      { label: "+66 2 000 0000", href: "tel:+6620000000" },
-      { label: "hello@def2design.com", href: "mailto:hello@def2design.com" },
-      { label: "LINE @def2design", href: "#" },
-      { label: "Bangkok, TH", href: "#" },
+      { label: "02 935 9702", href: "tel:+6629359702" },
+      { label: "095 536 1574", href: "tel:+66955361574" },
+      { label: "contactd2d@def2design.com", href: "mailto:contactd2d@def2design.com" },
+      { label: "Ladprao · Bangkok 10240", href: "https://www.def2design.com" },
     ],
   },
 ];
@@ -68,7 +68,7 @@ export function Footer({ dark = false }: FooterProps) {
         <p>
           Striking design. Stylish concept.
           <br />
-          © 2009–2026, Bangkok
+          © 2010–2026 · Def to Design Co., Ltd.
         </p>
         <div style={{ marginTop: 20, display: "flex", gap: 12 }}>
           {["TH", "EN"].map((lang) => (

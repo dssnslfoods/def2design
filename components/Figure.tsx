@@ -42,7 +42,7 @@ export function Photo({
   priority?: boolean;
 }) {
   return (
-    <div style={{ position: "relative", width: "100%", aspectRatio, overflow: "hidden", background: "var(--paper-2)", ...style }}>
+    <div className="zoomable" style={{ position: "relative", width: "100%", aspectRatio, overflow: "hidden", background: "var(--paper-2)", ...style }}>
       <Image
         src={src}
         alt={alt}

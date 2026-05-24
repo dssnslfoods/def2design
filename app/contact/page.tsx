@@ -34,18 +34,18 @@ const FIELDS = [
 ];
 
 const CONTACT_INFO = [
-  ["Studio", "Def to Design Co., Ltd.\nSathorn, Bangkok 10120\nThailand"],
-  ["Phone", "+66 2 000 0000\nMon – Fri · 09:30 – 18:30 (GMT+7)"],
-  ["Email", "hello@def2design.com\ncareers@def2design.com"],
-  ["LINE OA", "@def2design"],
-  ["Social", "Instagram · Behance · LinkedIn"],
+  ["Studio", "Def to Design Co., Ltd.\n999 Soi Ladprao 87, Ladprao Road\nKhlong Chan, Bang Kapi, Bangkok 10240"],
+  ["Phone", "Tel  02 935 9702\nFax  02 083 7573\nMobile  095 536 1574"],
+  ["Email", "contactd2d@def2design.com"],
+  ["Registration", "Tax ID 0105553130947\nDef to Design Co., Ltd. (Head Office)"],
+  ["Social", "Facebook · @deftodesign"],
 ];
 
 const FAQ = [
-  ["What is your minimum engagement?", "We do not have a minimum, but most One Report engagements start at ฿800,000 and run 12–16 weeks."],
-  ["Do you work in Thai and English?", "Yes. Both languages are designed in parallel, not translated afterward. We retain bilingual designers."],
-  ["Can you handle press?", "Yes. We supervise press checks personally, source paper, and manage bindery & finishing."],
-  ["Do you work with non-listed companies?", "Yes — state enterprises, public organizations and selected private companies with public-facing reports."],
+  ["What do you actually deliver?", "One Stop Service — from concept and design through to production and publishing. Annual reports, 56-1 One Reports, sustainability reports, eMagazines, calendars and diaries, and corporate print."],
+  ["Do you work in Thai and English?", "Yes. We design Thai and English in parallel, so both editions read with the same typographic care."],
+  ["Can you handle production and print?", "Yes. We manage the project end to end — design, file preparation, press and finishing — with efficient project management and close client communication."],
+  ["Who do you work with?", "Listed companies, state enterprises and large organizations — clients include CPALL, RATCH, AOT, COM7, S&P and Bank of Singapore."],
 ];
 
 export default function ContactPage() {

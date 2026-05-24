@@ -16,7 +16,7 @@ const RESULTS = [
   ["248pp", "Final volume"],
   ["TH · EN", "Bilingual parity"],
   ["16 wk", "From brief to press"],
-  ["SAA 2025", "Gold honoree"],
+  ["One stop", "Concept to print"],
 ];
 
 export default function CaseStudyPage({ params }: { params: { slug: string } }) {

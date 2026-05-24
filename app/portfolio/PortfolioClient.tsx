@@ -34,7 +34,7 @@ const CASE_STUDY_RESULTS = [
   ["248pp", "Final volume"],
   ["TH · EN", "Bilingual parity"],
   ["16 wk", "From brief to press"],
-  ["SAA 2025", "Gold honoree"],
+  ["One stop", "Concept to print"],
 ];
 
 export function PortfolioClient() {
@@ -94,6 +94,7 @@ export function PortfolioClient() {
           {filtered.map((item, i) => (
             <Link
               key={i}
+              className="pf-tile"
               href={`/portfolio/${item.title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`}
               style={{ gridColumn: `span ${item.cols}`, gridRow: `span ${item.rows}`, position: "relative", textDecoration: "none", overflow: "hidden", containerType: "size", background: TILE_BG[item.tone] }}
             >

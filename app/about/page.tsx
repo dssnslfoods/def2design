@@ -6,16 +6,16 @@ import { Photo } from "@/components/Figure";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Def to Design was founded in Bangkok in 2009. We work with listed companies, state enterprises and public organizations across Southeast Asia.",
+  description: "Def to Design Co., Ltd. is a Bangkok studio offering one-stop design and production for annual reports, 56-1 One Reports, sustainability reports, eMagazines and corporate print.",
 };
 
 const TIMELINE = [
-  ["2009", "Studio founded by report designers and IR veterans in Sathorn."],
-  ["2013", "First SAA Annual Report Award. Dedicated studio space."],
-  ["2017", "eMagazine practice launched. First SET50 digital edition."],
-  ["2021", "SET 56-1 One Report practice formalised. Sustainability added."],
-  ["2023", "17th international award. ESG advisory practice."],
-  ["2026", "Studio reissue. New site, digital practice, ESG advisory."],
+  ["2010", "Def to Design Co., Ltd. registered in Bangkok as a print-media design studio."],
+  ["2013", "Annual report practice established with listed-company clients."],
+  ["2016", "eMagazine and digital-edition service launched."],
+  ["2021", "56-1 One Report practice formalised after the SET format change."],
+  ["2023", "Sustainability report practice added as ESG disclosure expands."],
+  ["2026", "Studio reissue — new site and a refreshed digital practice."],
 ];
 
 const TEAM = [
@@ -35,11 +35,13 @@ const PHILOSOPHY = [
   ["Approach", "We do not template, we do not subcontract creative, and we are physically on the printing floor for press checks."],
 ];
 
-const AWARDS = [
-  ["SAA", "Annual Report Awards · Gold", "2013 · 2016 · 2018 · 2021 · 2023 · 2025"],
-  ["LACP", "Vision Awards", "2014 · 2017 · 2019 · 2022 · 2024"],
-  ["ARC", "International Annual Report Awards", "2015 · 2018 · 2020 · 2023"],
-  ["IR Magazine", "Best Annual Report SEA · Nominee", "2019 · 2022"],
+const CLIENTS = [
+  ["CPALL", "Annual report · One Report", "Retail · SET100"],
+  ["RATCH", "Annual & sustainability report", "Energy · SET"],
+  ["AOT", "Annual report · corporate print", "State enterprise"],
+  ["COM7", "Annual report · 56-1 One Report", "Retail · SET"],
+  ["S&P", "Annual report · eMagazine", "Food · SET"],
+  ["Bank of Singapore", "Corporate communications", "Banking"],
 ];
 
 export default function AboutPage() {
@@ -50,7 +52,7 @@ export default function AboutPage() {
       {/* HERO */}
       <section style={{ padding: "96px var(--page-x) 64px", borderBottom: "1px solid var(--line)" }}>
         <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--gray)", marginBottom: 32 }}>
-          The studio · est. 2009 · Bangkok
+          The studio · est. 2010 · Bangkok
         </div>
         <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(88px, 10vw, 132px)", lineHeight: 0.92, letterSpacing: "-.02em", maxWidth: "14ch" }}>
           We design the year, not just the{" "}
@@ -66,22 +68,23 @@ export default function AboutPage() {
         </div>
         <div style={{ fontSize: 18, lineHeight: 1.6, color: "var(--ink)", maxWidth: "62ch" }}>
           <p style={{ margin: "0 0 1em" }}>
-            Def to Design was founded in Bangkok in 2009 with a single conviction: that the annual report
-            is the most under-designed document in modern business. A document that costs a listed company
-            more than most of its marketing, lands on the desk of every analyst that covers it, and is the
-            only piece of communication that bears the chairman&apos;s signature — and yet is, somehow, the last
-            document anyone gets to design.
+            Def to Design Co., Ltd. was established in Bangkok in 2010 with a single conviction: that the
+            annual report is the most under-designed document in modern business. A document that costs a
+            listed company more than most of its marketing, lands on the desk of every analyst that covers
+            it, and bears the chairman&apos;s signature — and yet is, somehow, the last document anyone gets to
+            design.
           </p>
           <p style={{ margin: "0 0 1em" }}>
-            Sixteen years later, we work with listed companies, state enterprises and public organizations
-            across Southeast Asia — not as printers, but as the studio that argues for the narrative in the
-            room before the document leaves it. We are equal parts editorial, design and production.
+            Fifteen years on, we work with listed companies, state enterprises and large organizations —
+            among them CPALL, RATCH, AOT, COM7, S&amp;P and Bank of Singapore. We are not a printer. We are the
+            studio that shapes the narrative before the document leaves the room: equal parts editorial,
+            design and production.
           </p>
           <p style={{ margin: "0 0 1em" }}>
-            Our work has been recognized by the SAA Annual Report Awards, the LACP Vision Awards and the
-            international ARC Awards. But the metric we trust most is tenure: the average D2D client has
-            been with us for over twelve years. We are slow growth on purpose. We add one or two clients a
-            year. We turn down work that doesn&apos;t fit. The studio is small, by design.
+            We work as a One Stop Service — concept, design, file preparation, production and publishing —
+            for annual reports, 56-1 One Reports, sustainability reports, eMagazines, calendars and corporate
+            print. Everything is designed in Thai and English in parallel, managed with disciplined project
+            management and close client communication.
           </p>
         </div>
       </div>
@@ -125,12 +128,12 @@ export default function AboutPage() {
         ))}
       </div>
 
-      {/* AWARDS */}
-      <SectionMarker left="05 — Recognition" right="17 international honors" />
+      {/* SELECTED CLIENTS */}
+      <SectionMarker left="05 — Selected clients" right="Listed companies · State enterprises" />
       <div style={{ padding: "56px var(--page-x)" }}>
         <div style={{ borderTop: "1px solid var(--ink)" }}>
-          {AWARDS.map(([a, b, c]) => (
-            <div key={a} style={{ display: "grid", gridTemplateColumns: "200px 1fr 1fr", alignItems: "baseline", padding: "28px 0", borderBottom: "1px solid var(--line)", gap: 24 }}>
+          {CLIENTS.map(([a, b, c]) => (
+            <div key={a} style={{ display: "grid", gridTemplateColumns: "260px 1fr 1fr", alignItems: "baseline", padding: "28px 0", borderBottom: "1px solid var(--line)", gap: 24 }}>
               <div style={{ fontFamily: "var(--font-serif)", fontSize: 36, color: "var(--emerald)", fontStyle: "italic" }}>{a}</div>
               <div style={{ fontFamily: "var(--font-serif)", fontSize: 22, lineHeight: 1.1 }}>{b}</div>
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--gray)", textAlign: "right" }}>{c}</div>

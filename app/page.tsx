@@ -22,11 +22,13 @@ const SERVICES = [
 ];
 
 const STATS = [
-  ["+150", "Annual reports delivered"],
-  ["+60", "Listed-company clients"],
-  ["+12yr", "Average client tenure"],
-  ["17", "SAA / ARC / LACP awards"],
+  ["2010", "Studio founded in Bangkok"],
+  ["56-1", "One Report specialists"],
+  ["One stop", "Concept to production"],
+  ["TH · EN", "Bilingual by default"],
 ];
+
+const CLIENTS = ["CPALL", "S&P", "RATCH", "PTTGC", "AOT", "COM7", "Bank of Singapore", "& more"];
 
 export default function HomePage() {
   return (
@@ -36,19 +38,19 @@ export default function HomePage() {
       {/* HERO */}
       <section style={{ padding: "120px var(--page-x) 64px", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 64, alignItems: "end", minHeight: 640 }}>
         <div>
-          <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--gray)", marginBottom: 48 }}>
-            Striking design · Stylish concept · Since 2009
+          <div className="rise rise-1" style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--gray)", marginBottom: 48 }}>
+            Striking design · Stylish concept · Since 2010
           </div>
-          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(88px, 10.5vw, 148px)", lineHeight: 0.9, letterSpacing: "-.025em" }}>
+          <h1 className="rise rise-2" style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(88px, 10.5vw, 148px)", lineHeight: 0.9, letterSpacing: "-.025em" }}>
             Designing<br />the document<br />a board{" "}
             <em style={{ fontStyle: "italic", color: "var(--emerald)" }}>signs.</em>
           </h1>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+        <div className="rise rise-3" style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           <p style={{ fontSize: 18, lineHeight: 1.55, color: "var(--gray)", maxWidth: "34ch" }}>
-            Thailand&apos;s premier studio for One Reports, Annual Reports and ESG
-            communications — trusted by listed companies, state enterprises and
-            public organizations.
+            A Bangkok studio for annual reports, 56-1 One Reports and sustainability
+            reporting — one-stop design and production, trusted by listed companies
+            and state enterprises.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <Btn href="/portfolio" variant="primary">View portfolio</Btn>
@@ -112,7 +114,7 @@ export default function HomePage() {
       <SectionMarker left="04 — Why Def to Design" right="The case in numbers" />
       <div style={{ padding: "80px var(--page-x)", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64 }}>
         <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(48px, 5vw, 64px)", lineHeight: 0.95, letterSpacing: "-.015em" }}>
-          Sixteen years inside Thailand&apos;s listed company communications.
+          Fifteen years designing Thailand&apos;s corporate reports and communications.
         </h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 32 }}>
           {STATS.map(([n, l]) => (
@@ -125,11 +127,11 @@ export default function HomePage() {
       </div>
 
       {/* LOGO WALL */}
-      <SectionMarker left="05 — Trusted by" right="SET · mai · State enterprises" />
-      <div style={{ padding: "0 var(--page-x) 56px", display: "grid", gridTemplateColumns: "repeat(6,1fr)", borderTop: "1px solid var(--line)" }}>
-        {Array.from({ length: 12 }).map((_, i) => (
-          <div key={i} style={{ aspectRatio: "2/1", borderRight: (i + 1) % 6 !== 0 ? "1px solid var(--line)" : "none", borderBottom: i < 6 ? "1px solid var(--line)" : "none", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--gray-2)" }}>
-            CLIENT {String(i + 1).padStart(2, "0")}
+      <SectionMarker left="05 — Trusted by" right="Listed companies · State enterprises" />
+      <div style={{ padding: "0 var(--page-x) 56px", display: "grid", gridTemplateColumns: "repeat(4,1fr)", borderTop: "1px solid var(--line)" }}>
+        {CLIENTS.map((name, i) => (
+          <div key={name} style={{ aspectRatio: "5/2", borderRight: (i + 1) % 4 !== 0 ? "1px solid var(--line)" : "none", borderBottom: i < 4 ? "1px solid var(--line)" : "none", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-serif)", fontSize: 26, letterSpacing: "-.01em", color: i === CLIENTS.length - 1 ? "var(--gray-2)" : "var(--ink)", fontStyle: i === CLIENTS.length - 1 ? "italic" : "normal" }}>
+            {name}
           </div>
         ))}
       </div>

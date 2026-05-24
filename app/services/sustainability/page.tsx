@@ -121,10 +121,10 @@ export default function SustainabilityPage() {
             <em style={{ fontStyle: "italic", color: "var(--emerald)" }}>Green.</em>
           </h2>
           <p style={{ fontSize: 15, color: "var(--gray)", lineHeight: 1.7, marginTop: 24, maxWidth: "48ch" }}>
-            A ten-year retrospective sustainability report told in three chapters — Earth, People, Governance — each opening with a long-form essay before descending into framework-mapped disclosure. The first sustainability report in Thailand to be IFRS S1/S2 aligned at publication.
+            A ten-year retrospective sustainability report told in three chapters — Earth, People, Governance — each opening with a long-form essay before descending into framework-mapped disclosure, aligned to IFRS S1/S2 at publication.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24, marginTop: 40, paddingTop: 24, borderTop: "1px solid var(--ink)" }}>
-            {[["196pp", "Volume"], ["IFRS", "S1 / S2"], ["SAA", "Honoree"]].map(([n, l]) => (
+            {[["196pp", "Volume"], ["IFRS", "S1 / S2"], ["TH · EN", "Bilingual"]].map(([n, l]) => (
               <div key={l}>
                 <div style={{ fontFamily: "var(--font-serif)", fontSize: 48, color: "var(--emerald)", lineHeight: 1 }}>{n}</div>
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--gray)", marginTop: 10 }}>{l}</div>
