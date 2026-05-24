@@ -18,15 +18,37 @@ const TIMELINE = [
   ["2026", "Studio reissue — new site and a refreshed digital practice."],
 ];
 
-const TEAM = [
-  ["Founding Principal", "Editorial direction · IR strategy"],
-  ["Design Principal", "Cover · spread system · typography"],
-  ["Sustainability Lead", "GRI · SASB · TCFD · IFRS S1/S2"],
-  ["Production Lead", "Press · bindery · finishing"],
-  ["Senior Designer", "Bilingual typesetting · TH · EN"],
-  ["Senior Designer", "Infographic · data visualization"],
-  ["Digital Lead", "eMagazine · microsites"],
-  ["Studio Manager", "Client liaison · operations"],
+const ADVANTAGES = [
+  {
+    img: "adv-team",
+    title: "A senior team, not a junior bench.",
+    desc: "Editors, designers and production leads who have built corporate reports for more than a decade — for listed companies, state enterprises and the Stock Exchange of Thailand itself.",
+  },
+  {
+    img: "adv-meeting",
+    title: "Full-time, not freelance.",
+    desc: "A dedicated in-house team is assigned to your report for the whole cycle. We do not subcontract the creative, and we do not disappear after the brief.",
+  },
+  {
+    img: "adv-design",
+    title: "Every tool, under one roof.",
+    desc: "Editorial, design, prepress, photography and digital — the complete toolchain to take a 56-1 One Report from first outline to finished print and eMagazine.",
+  },
+  {
+    img: "adv-calendar",
+    title: "On time, every filing season.",
+    desc: "Milestones, proofs and press dates planned backwards from your AGM and SET deadlines — so the date that matters is never the one at risk.",
+  },
+  {
+    img: "adv-tools",
+    title: "A process, not improvisation.",
+    desc: "A four-phase method — discover, architect, design, produce — keeps a complex bilingual report moving from kickoff to launch without surprises.",
+  },
+  {
+    img: "adv-books",
+    title: "Concept to press, one partner.",
+    desc: "Strategy, writing, design, bilingual typesetting, print supervision and digital edition — managed end to end, so nothing falls between vendors.",
+  },
 ];
 
 const PHILOSOPHY = [
@@ -116,15 +138,17 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* TEAM */}
-      <SectionMarker left="04 — The studio" right="Small, by design" />
-      <div style={{ padding: "56px var(--page-x)", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24 }}>
-        {TEAM.map(([role, specialty], i) => (
-          <div key={i}>
-            <Photo src={`/images/portrait-${i + 1}.jpg`} alt={`${role} — Def to Design studio portrait`} aspectRatio="1/1" style={{ marginBottom: 16 }} />
-            <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--gray)", marginBottom: 6 }}>—</div>
-            <div style={{ fontFamily: "var(--font-serif)", fontSize: 22, lineHeight: 1.15 }}>{role}</div>
-            <p style={{ fontSize: 12, color: "var(--gray)", marginTop: 6 }}>{specialty}</p>
+      {/* OUR ADVANTAGE */}
+      <SectionMarker left="04 — Our advantage" right="Why work with us" />
+      <div style={{ padding: "56px var(--page-x)", display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 48 }}>
+        {ADVANTAGES.map((a, i) => (
+          <div key={a.img}>
+            <Photo src={`/images/${a.img}.jpg`} alt={a.title} aspectRatio="4/3" style={{ marginBottom: 20 }} />
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--emerald)", marginBottom: 14 }}>
+              {String(i + 1).padStart(2, "0")}
+            </div>
+            <h3 style={{ fontFamily: "var(--font-serif)", fontSize: 26, lineHeight: 1.1, letterSpacing: "-.01em", marginBottom: 12 }}>{a.title}</h3>
+            <p style={{ fontSize: 14, color: "var(--gray)", lineHeight: 1.6, maxWidth: "38ch" }}>{a.desc}</p>
           </div>
         ))}
       </div>
