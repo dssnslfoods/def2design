@@ -1,25 +1,29 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useLocale } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { getDict } from "@/i18n/dictionaries";
 import { Btn } from "./Button";
 
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Insights", href: "/insights" },
-  { label: "Contact", href: "/contact" },
-];
+const NAV_HREFS = [
+  { key: "Home", href: "/" },
+  { key: "About", href: "/about" },
+  { key: "Services", href: "/services" },
+  { key: "Portfolio", href: "/portfolio" },
+  { key: "Insights", href: "/insights" },
+  { key: "Contact", href: "/contact" },
+] as const;
 
 interface NavProps {
   dark?: boolean;
 }
 
 export function Nav({ dark = false }: NavProps) {
-  const pathname = usePathname();
+  const pathname = usePathname(); // locale-stripped, e.g. "/about"
+  const locale = useLocale() as Locale;
+  const t = getDict(locale).nav;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -37,6 +41,30 @@ export function Nav({ dark = false }: NavProps) {
   const muted = dark && !scrolled ? "var(--paper-dim)" : "var(--gray)";
   const borderColor = dark && !scrolled ? "var(--line-dark)" : "var(--line)";
   const bg = scrolled ? "var(--paper)" : dark ? "var(--navy)" : "var(--paper)";
+
+  const LangToggle = ({ light = false }: { light?: boolean }) => {
+    const base = light ? "var(--paper-fade)" : muted;
+    return (
+      <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".14em", textTransform: "uppercase" }}>
+        {(["th", "en"] as const).map((lc, i) => (
+          <React.Fragment key={lc}>
+            {i > 0 && <span style={{ color: base, margin: "0 6px" }}>/</span>}
+            <Link
+              href={pathname}
+              locale={lc}
+              style={{
+                color: lc === locale ? (light ? "var(--paper)" : "var(--emerald)") : base,
+                textDecoration: "none",
+                fontWeight: lc === locale ? 500 : 400,
+              }}
+            >
+              {lc.toUpperCase()}
+            </Link>
+          </React.Fragment>
+        ))}
+      </span>
+    );
+  };
 
   return (
     <>
@@ -74,21 +102,11 @@ export function Nav({ dark = false }: NavProps) {
 
         {/* Links — desktop */}
         <ul
-          style={{
-            display: "flex",
-            gap: 36,
-            listStyle: "none",
-            padding: 0,
-            margin: 0,
-            fontSize: 13,
-          }}
+          style={{ display: "flex", gap: 36, listStyle: "none", padding: 0, margin: 0, fontSize: 13 }}
           className="hidden md:flex"
         >
-          {NAV_LINKS.map((l) => {
-            const isActive =
-              l.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(l.href);
+          {NAV_HREFS.map((l) => {
+            const isActive = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
             return (
               <li key={l.href}>
                 <Link
@@ -101,7 +119,7 @@ export function Nav({ dark = false }: NavProps) {
                     fontWeight: isActive ? 500 : 400,
                   }}
                 >
-                  {l.label}
+                  {t.links[l.key]}
                 </Link>
               </li>
             );
@@ -110,19 +128,11 @@ export function Nav({ dark = false }: NavProps) {
 
         {/* CTA + language toggle */}
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <span
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: 10,
-              letterSpacing: ".14em",
-              textTransform: "uppercase",
-              color: muted,
-            }}
-          >
-            TH / EN
+          <span className="hidden md:inline">
+            <LangToggle light={dark && !scrolled} />
           </span>
           <Btn href="/contact" variant={dark && !scrolled ? "dark" : "default"}>
-            Brief us
+            {t.briefUs}
           </Btn>
 
           {/* Hamburger — mobile */}
@@ -162,42 +172,28 @@ export function Nav({ dark = false }: NavProps) {
           <button
             onClick={() => setMobileOpen(false)}
             aria-label="Close menu"
-            style={{
-              background: "transparent",
-              border: "none",
-              color: "var(--paper)",
-              fontSize: 24,
-              cursor: "pointer",
-              padding: 8,
-            }}
+            style={{ background: "transparent", border: "none", color: "var(--paper)", fontSize: 24, cursor: "pointer", padding: 8 }}
           >
             ×
           </button>
         </div>
         <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-          {NAV_LINKS.map((l) => (
+          {NAV_HREFS.map((l) => (
             <li key={l.href} style={{ borderBottom: "1px solid var(--line-dark)" }}>
               <Link
                 href={l.href}
-                style={{
-                  display: "block",
-                  padding: "20px 0",
-                  fontFamily: "var(--font-serif)",
-                  fontSize: 36,
-                  color: "var(--paper)",
-                  textDecoration: "none",
-                  lineHeight: 1,
-                }}
+                style={{ display: "block", padding: "20px 0", fontFamily: "var(--font-serif)", fontSize: 36, color: "var(--paper)", textDecoration: "none", lineHeight: 1 }}
               >
-                {l.label}
+                {t.links[l.key]}
               </Link>
             </li>
           ))}
         </ul>
-        <div style={{ marginTop: "auto" }}>
+        <div style={{ marginTop: "auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Btn href="/contact" variant="dark" large>
-            Brief us
+            {t.briefUs}
           </Btn>
+          <LangToggle light />
         </div>
       </div>
     </>
