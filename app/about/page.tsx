@@ -41,7 +41,7 @@ const CLIENTS = [
   ["AOT", "Annual report · corporate print", "State enterprise"],
   ["COM7", "Annual report · 56-1 One Report", "Retail · SET"],
   ["S&P", "Annual report · eMagazine", "Food · SET"],
-  ["Bank of Singapore", "Corporate communications", "Banking"],
+  ["PTTGC", "Annual & sustainability report", "Petrochemical · SET100"],
 ];
 
 export default function AboutPage() {
@@ -76,7 +76,7 @@ export default function AboutPage() {
           </p>
           <p style={{ margin: "0 0 1em" }}>
             Fifteen years on, we work with listed companies, state enterprises and large organizations —
-            among them CPALL, RATCH, AOT, COM7, S&amp;P and Bank of Singapore. We are not a printer. We are the
+            among them CPALL, RATCH, PTTGC, AOT, COM7 and S&amp;P. We are not a printer. We are the
             studio that shapes the narrative before the document leaves the room: equal parts editorial,
             design and production.
           </p>

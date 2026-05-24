@@ -28,7 +28,7 @@ const STATS = [
   ["TH · EN", "Bilingual by default"],
 ];
 
-const CLIENTS = ["CPALL", "S&P", "RATCH", "PTTGC", "AOT", "COM7", "Bank of Singapore", "& more"];
+const CLIENTS = ["CPALL", "S&P", "RATCH", "PTTGC", "AOT", "COM7", "& more"];
 
 export default function HomePage() {
   return (
