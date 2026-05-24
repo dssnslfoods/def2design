@@ -36,10 +36,11 @@ const PHILOSOPHY = [
 ];
 
 const CLIENTS = [
-  ["CPALL", "Annual report · One Report", "Retail · SET100"],
+  ["CPALL", "Annual report · 56-1 One Report", "Retail · SET100"],
+  ["CENTEL", "Annual report · 56-1 One Report", "Hospitality · SET100"],
+  ["HOMEPRO", "Annual report · 56-1 One Report", "Retail · SET100"],
   ["RATCH", "Annual & sustainability report", "Energy · SET"],
-  ["AOT", "Annual report · corporate print", "State enterprise"],
-  ["COM7", "Annual report · 56-1 One Report", "Retail · SET"],
+  ["AOT", "Monthly eMagazine · internal communication", "State enterprise"],
   ["S&P", "Annual report · eMagazine", "Food · SET"],
   ["SET", "Annual report", "Stock Exchange of Thailand"],
 ];
@@ -76,7 +77,7 @@ export default function AboutPage() {
           </p>
           <p style={{ margin: "0 0 1em" }}>
             Fifteen years on, we work with listed companies, state enterprises and large organizations —
-            among them CPALL, RATCH, the Stock Exchange of Thailand, AOT, COM7 and S&amp;P. We are not a printer. We are the
+            among them CPALL, CENTEL, HOMEPRO, RATCH, AOT, S&amp;P and the Stock Exchange of Thailand. We are not a printer. We are the
             studio that shapes the narrative before the document leaves the room: equal parts editorial,
             design and production.
           </p>

@@ -45,7 +45,7 @@ const FAQ = [
   ["What do you actually deliver?", "One Stop Service — from concept and design through to production and publishing. Annual reports, 56-1 One Reports, sustainability reports, eMagazines, calendars and diaries, and corporate print."],
   ["Do you work in Thai and English?", "Yes. We design Thai and English in parallel, so both editions read with the same typographic care."],
   ["Can you handle production and print?", "Yes. We manage the project end to end — design, file preparation, press and finishing — with efficient project management and close client communication."],
-  ["Who do you work with?", "Listed companies, state enterprises and large organizations — clients include CPALL, RATCH, AOT, COM7 and S&P."],
+  ["Who do you work with?", "Listed companies, state enterprises and large organizations — clients include CPALL, CENTEL, HOMEPRO, RATCH, AOT and S&P."],
 ];
 
 export default function ContactPage() {
