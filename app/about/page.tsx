@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { SectionMarker } from "@/components/SectionMarker";
-import { Photo } from "@/components/Figure";
+import { Photo, Infographic } from "@/components/Figure";
 
 export const metadata: Metadata = {
   title: "About",
@@ -140,6 +140,33 @@ export default function AboutPage() {
 
       {/* OUR ADVANTAGE */}
       <SectionMarker left="04 — Our advantage" right="Why work with us" />
+
+      {/* FEATURED — data made legible through infographics */}
+      <div style={{ padding: "80px var(--page-x)", display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 72, alignItems: "center", borderBottom: "1px solid var(--line)" }}>
+        <div>
+          <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--emerald)", marginBottom: 24 }}>
+            Data, made legible
+          </div>
+          <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(40px, 4.5vw, 56px)", lineHeight: 1.0, letterSpacing: "-.015em", marginBottom: 24 }}>
+            Numbers a reader can{" "}
+            <em style={{ fontStyle: "italic", color: "var(--emerald)" }}>actually read.</em>
+          </h3>
+          <p style={{ fontSize: 16, color: "var(--gray)", lineHeight: 1.7, maxWidth: "46ch" }}>
+            A report is only as clear as its most complex page. We read the data first — financials, KPIs,
+            ESG metrics — and rebuild it as clean, typographic infographics. The aim is simple: a board
+            member, an analyst and a first-time reader should all understand the same number the same way,
+            at a glance.
+          </p>
+        </div>
+        <Infographic
+          stats={[["+18%", "Revenue YoY"], ["฿2.3B", "Net profit"], ["-42%", "Emissions"], ["98%", "Coverage"], ["TH · EN", "Bilingual"], ["+150", "Reports"]]}
+          tone="navy"
+          aspectRatio="4/3"
+          eyebrow="Fig. — Financial & ESG highlights, typeset by hand"
+          alt="Example of a typographic infographic — financial and ESG highlights"
+        />
+      </div>
+
       <div style={{ padding: "56px var(--page-x)", display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 48 }}>
         {ADVANTAGES.map((a, i) => (
           <div key={a.img}>
