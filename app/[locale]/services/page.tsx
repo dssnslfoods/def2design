@@ -71,7 +71,7 @@ export default function ServicesPage() {
       </div>
 
       {/* IMAGE BAND */}
-      <ImageBand src="/images/band-paper.jpg" alt="Bound corporate reports and publications" caption="From brief to bound · selected work" aspectRatio="21/8" />
+      <ImageBand src="/images/band-studio.jpg" alt="The workspace where reports are designed" caption="Where the work happens · Bangkok" />
 
       {/* PROCESS */}
       <SectionMarker left="How we engage" right="Our process" />

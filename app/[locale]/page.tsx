@@ -82,7 +82,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* IMAGE BAND */}
       <div style={{ paddingTop: 56 }}>
-        <ImageBand src="/images/band-books.jpg" alt="Printed report pages — editorial typography" caption="Printed editions · 2024 — 2025" aspectRatio="21/8" />
+        <ImageBand src="/images/band-office.jpg" alt="A boardroom where annual reports are reviewed" caption="Where the document meets the board · 2024 — 2025" />
       </div>
 
       {/* SERVICES */}

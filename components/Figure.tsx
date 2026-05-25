@@ -247,16 +247,24 @@ export function ImageBand({
   src,
   alt,
   caption,
-  aspectRatio = "21/9",
+  height = "clamp(240px, 34vh, 420px)",
 }: {
   src: string;
   alt: string;
   caption?: string;
-  aspectRatio?: string;
+  height?: string;
 }) {
   return (
     <figure style={{ margin: 0 }}>
-      <Photo src={src} alt={alt} aspectRatio={aspectRatio} />
+      <div className="zoomable" style={{ position: "relative", width: "100%", height, overflow: "hidden", background: "var(--paper-2)" }}>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="100vw"
+          style={{ objectFit: "cover", filter: "saturate(.85) contrast(.98)" }}
+        />
+      </div>
       {caption && (
         <figcaption
           style={{

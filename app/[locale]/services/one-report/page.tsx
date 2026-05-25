@@ -73,7 +73,7 @@ export default function OneReportPage() {
       </section>
 
       {/* FEATURE BAND */}
-      <ImageBand src="/images/hero-proof.jpg" alt="An annotated One Report proof on the desk" caption="Fig. — An annotated One Report proof · the studio archive" aspectRatio="21/8" />
+      <ImageBand src="/images/adv-team.jpg" alt="The team working on a One Report" caption="The team behind every One Report" />
 
       {/* DELIVERABLES */}
       <SectionMarker left="01 — What you receive" right="Six core deliverables" />
