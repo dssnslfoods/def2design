@@ -4,10 +4,11 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { SectionMarker } from "@/components/SectionMarker";
 import { Btn } from "@/components/Button";
+import { ImageBand } from "@/components/Figure";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Seven disciplines, one studio. From One Reports to eMagazines — end to end, in Thai and English.",
+  description: "Seven disciplines, one partner. From One Reports to eMagazines — end to end, in Thai and English.",
 };
 
 const SERVICES = [
@@ -35,7 +36,7 @@ export default function ServicesPage() {
       {/* HERO */}
       <section style={{ padding: "96px var(--page-x) 64px", borderBottom: "1px solid var(--line)" }}>
         <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".14em", textTransform: "uppercase", color: "var(--gray)", marginBottom: 32 }}>
-          03 / Services · Seven disciplines, one studio
+          03 / Services · Seven disciplines, one partner
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1.6fr 1fr", gap: 64, alignItems: "end" }}>
           <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(88px, 10vw, 148px)", lineHeight: 0.9, letterSpacing: "-.02em" }}>
@@ -43,7 +44,7 @@ export default function ServicesPage() {
             <em style={{ fontStyle: "italic", color: "var(--emerald)" }}>do.</em>
           </h1>
           <p style={{ fontSize: 18, lineHeight: 1.55, color: "var(--gray)", maxWidth: "36ch" }}>
-            We are a small studio with a deep practice in corporate communication for listed companies, state enterprises and public organizations. Each discipline below is delivered end to end — under one roof, in Thai and English, with senior creative direction.
+            We are a focused team with a deep practice in corporate communication for listed companies, state enterprises and public organizations. Each discipline below is delivered end to end — under one roof, in Thai and English, with senior creative direction.
           </p>
         </div>
       </section>
@@ -69,8 +70,11 @@ export default function ServicesPage() {
         ))}
       </div>
 
+      {/* IMAGE BAND */}
+      <ImageBand src="/images/band-paper.jpg" alt="Bound corporate reports and publications" caption="From brief to bound · selected work" aspectRatio="21/8" />
+
       {/* PROCESS */}
-      <SectionMarker left="How we engage" right="The studio process" />
+      <SectionMarker left="How we engage" right="Our process" />
       <div style={{ padding: "80px var(--page-x)", display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: 64 }}>
         <h2 style={{ fontFamily: "var(--font-serif)", fontSize: 48, lineHeight: 1, letterSpacing: "-.015em" }}>
           A four-phase process — from brief to{" "}

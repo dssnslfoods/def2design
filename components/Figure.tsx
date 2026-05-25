@@ -242,6 +242,39 @@ export function Infographic({
   );
 }
 
+/* ─── ImageBand — full-bleed editorial photo + caption ──────── */
+export function ImageBand({
+  src,
+  alt,
+  caption,
+  aspectRatio = "21/9",
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  aspectRatio?: string;
+}) {
+  return (
+    <figure style={{ margin: 0 }}>
+      <Photo src={src} alt={alt} aspectRatio={aspectRatio} />
+      {caption && (
+        <figcaption
+          style={{
+            padding: "14px var(--page-x) 0",
+            fontFamily: "var(--font-mono)",
+            fontSize: 11,
+            letterSpacing: ".14em",
+            textTransform: "uppercase",
+            color: "var(--gray)",
+          }}
+        >
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
 /* ─── StudioMap ─────────────────────────────────────────────── */
 export function StudioMap({ aspectRatio = "16/10", style }: { aspectRatio?: string; style?: React.CSSProperties }) {
   return (

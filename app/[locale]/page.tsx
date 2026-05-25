@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { SectionMarker } from "@/components/SectionMarker";
 import { Btn } from "@/components/Button";
-import { ReportCover, ReportSpread } from "@/components/Figure";
+import { ReportCover, ReportSpread, ImageBand, Photo } from "@/components/Figure";
 
 const SERVICE_HREFS = [
   "/services/one-report",
@@ -80,6 +80,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         ))}
       </div>
 
+      {/* IMAGE BAND */}
+      <div style={{ paddingTop: 56 }}>
+        <ImageBand src="/images/band-books.jpg" alt="Printed report pages — editorial typography" caption="Printed editions · 2024 — 2025" aspectRatio="21/8" />
+      </div>
+
       {/* SERVICES */}
       <SectionMarker left={t.servicesMarkerL} right={t.servicesMarkerR} />
       <div style={{ padding: "56px var(--page-x)", display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 0 }}>
@@ -123,10 +128,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* WHY / STATS */}
       <SectionMarker left={t.whyMarkerL} right={t.whyMarkerR} />
-      <div style={{ padding: "80px var(--page-x)", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64 }}>
-        <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(48px, 5vw, 64px)", lineHeight: 0.95, letterSpacing: "-.015em" }}>
-          {t.whyHeading}
-        </h2>
+      <div style={{ padding: "80px var(--page-x)", display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64, alignItems: "start" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(40px, 4.5vw, 60px)", lineHeight: 0.95, letterSpacing: "-.015em" }}>
+            {t.whyHeading}
+          </h2>
+          <Photo src="/images/adv-meeting.jpg" alt="The team at work on a report" aspectRatio="4/3" />
+        </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 32 }}>
           {stats.map(([n, l]) => (
             <div key={l} style={{ borderTop: "1px solid var(--line)", paddingTop: 18 }}>

@@ -4,7 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { SectionMarker } from "@/components/SectionMarker";
 import { Btn } from "@/components/Button";
-import { ReportCover } from "@/components/Figure";
+import { ReportCover, ImageBand } from "@/components/Figure";
 import { Arrow } from "@/components/Arrow";
 
 const COVER_TONES = ["paper", "navy", "mist"] as const;
@@ -71,6 +71,9 @@ export default function OneReportPage() {
           </div>
         </div>
       </section>
+
+      {/* FEATURE BAND */}
+      <ImageBand src="/images/hero-proof.jpg" alt="An annotated One Report proof on the desk" caption="Fig. — An annotated One Report proof · the studio archive" aspectRatio="21/8" />
 
       {/* DELIVERABLES */}
       <SectionMarker left="01 — What you receive" right="Six core deliverables" />
