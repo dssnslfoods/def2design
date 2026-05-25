@@ -45,11 +45,11 @@ const en = {
   },
   home: {
     eyebrow: "Striking design · Stylish concept · Since 2010",
-    heroL1: "Designing",
-    heroL2: "the document",
-    heroL3: "a board",
-    heroEm: "signs.",
-    lede: "A Bangkok studio for annual reports, 56-1 One Reports and sustainability reporting — one-stop design and production, trusted by listed companies and state enterprises.",
+    heroL1: "Every report,",
+    heroL2: "designed and",
+    heroL3: "produced",
+    heroEm: "end to end.",
+    lede: "Bangkok's one-stop partner for annual reports, 56-1 One Reports and sustainability reporting — from concept and design through to production. Trusted by listed companies and state enterprises.",
     meta: {
       founded: "Founded",
       reports: "Reports delivered",
@@ -143,10 +143,10 @@ const th: DeepPartial<Dict> = {
   home: {
     eyebrow: "ออกแบบโดดเด่น · แนวคิดมีสไตล์ · ตั้งแต่ปี 2553",
     heroL1: "ออกแบบ",
-    heroL2: "เอกสารสำคัญ",
-    heroL3: "ที่คณะกรรมการ",
-    heroEm: "ลงนาม",
-    lede: "สตูดิโอออกแบบในกรุงเทพฯ สำหรับรายงานประจำปี รายงาน 56-1 One Report และรายงานความยั่งยืน — บริการครบวงจรตั้งแต่ออกแบบจนถึงผลิต ได้รับความไว้วางใจจากบริษัทจดทะเบียนและรัฐวิสาหกิจ",
+    heroL2: "และผลิตรายงาน",
+    heroL3: "แบบครบวงจร",
+    heroEm: "จบที่เดียว",
+    lede: "ผู้ให้บริการครบวงจรในกรุงเทพฯ สำหรับรายงานประจำปี รายงาน 56-1 One Report และรายงานความยั่งยืน — ดูแลตั้งแต่แนวคิดและออกแบบไปจนถึงการผลิต ได้รับความไว้วางใจจากบริษัทจดทะเบียนและรัฐวิสาหกิจ",
     meta: {
       founded: "ก่อตั้ง",
       reports: "รายงานที่ส่งมอบ",
